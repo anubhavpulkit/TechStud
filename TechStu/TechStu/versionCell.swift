@@ -10,8 +10,8 @@ import UIKit
 
 class versionCell: UITableViewCell {
 
-    @IBOutlet weak var versionLabel: UILabel!
     
+    @IBOutlet weak var cellButtons: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +20,9 @@ class versionCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        cellButtons.layer.borderWidth = 2.0
+        cellButtons.layer.cornerRadius = 10
+        
     }
 
 }

@@ -154,7 +154,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-yu-TVv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-yu-TVv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -165,22 +165,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-rE-4XM">
-                                                    <rect key="frame" x="20" y="11" width="374" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-6t-lI3">
+                                                    <rect key="frame" x="20" y="10" width="374" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="54Y-CH-nEK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FEb-rE-4XM" firstAttribute="top" secondItem="8QX-zg-nmX" secondAttribute="topMargin" id="ABV-7L-iHh"/>
-                                                <constraint firstItem="FEb-rE-4XM" firstAttribute="trailing" secondItem="8QX-zg-nmX" secondAttribute="trailingMargin" id="Bng-Ft-z28"/>
-                                                <constraint firstItem="FEb-rE-4XM" firstAttribute="centerY" secondItem="8QX-zg-nmX" secondAttribute="centerY" id="bVC-dC-AMb"/>
-                                                <constraint firstItem="FEb-rE-4XM" firstAttribute="leading" secondItem="8QX-zg-nmX" secondAttribute="leadingMargin" id="biF-6d-ps3"/>
+                                                <constraint firstAttribute="trailing" secondItem="MF2-6t-lI3" secondAttribute="trailing" constant="20" id="GqZ-zA-Lwb"/>
+                                                <constraint firstAttribute="bottom" secondItem="MF2-6t-lI3" secondAttribute="bottom" constant="10" id="OUA-B9-cms"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="leading" secondItem="8QX-zg-nmX" secondAttribute="leading" constant="20" id="OVt-9p-00Z"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="top" secondItem="8QX-zg-nmX" secondAttribute="top" constant="10" id="Xd2-HU-Bc7"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="centerY" secondItem="8QX-zg-nmX" secondAttribute="centerY" id="gqN-1U-unk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="versionLabel" destination="FEb-rE-4XM" id="LTK-aM-reE"/>
+                                            <outlet property="cellButtons" destination="MF2-6t-lI3" id="Iun-w5-EPW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

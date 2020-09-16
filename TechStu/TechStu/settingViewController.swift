@@ -10,7 +10,7 @@ import UIKit
 
 class settingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let label = ["Version: ", "Share with friends!", "About Us!", "Rate Us!"]
+    let label = ["Version: ", "About Us!", "Rate Us!", "Share with friends!"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return label.count

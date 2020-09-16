@@ -222,6 +222,9 @@
                         <viewLayoutGuide key="safeArea" id="EJh-ns-Kto"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="3ST-ao-Ssd"/>
+                    <connections>
+                        <outlet property="SettingTable" destination="jUr-yu-TVv" id="f5R-9Q-wpL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irx-iw-d3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

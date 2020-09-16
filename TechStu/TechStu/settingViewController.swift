@@ -9,25 +9,34 @@
 import UIKit
 
 class settingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var SettingTable: UITableView!
     
-    let label = ["Version: ", "About Us!", "Rate Us!", "Share with friends!"]
+    let label = ["About Us!", "Rate Us!", "Share with friends!"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return label.count
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row > 2 {
+            let coustumCell:SettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as! SettingTableViewCell
+            coustumCell.configure(with: "Version: 1.0.0")
+            
+            return coustumCell
+        }
         
         let cell:versionCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! versionCell
         
             cell.cellButtons.setTitle(label[indexPath.row], for: .normal)
         return cell
+        
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        SettingTable.register(SettingTableViewCell.nib(), forCellReuseIdentifier: SettingTableViewCell.identifier)
     }
 
 }

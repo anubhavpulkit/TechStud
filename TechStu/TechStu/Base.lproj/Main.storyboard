@@ -154,8 +154,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-yu-TVv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-yu-TVv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="50" id="cgj-1E-twI" customClass="versionCell" customModule="TechStu" customModuleProvider="target">
@@ -165,20 +166,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-6t-lI3">
+                                                <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-6t-lI3">
                                                     <rect key="frame" x="20" y="10" width="374" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="54Y-CH-nEK"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="MF2-6t-lI3" secondAttribute="trailing" constant="20" id="GqZ-zA-Lwb"/>
-                                                <constraint firstAttribute="bottom" secondItem="MF2-6t-lI3" secondAttribute="bottom" constant="10" id="OUA-B9-cms"/>
-                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="leading" secondItem="8QX-zg-nmX" secondAttribute="leading" constant="20" id="OVt-9p-00Z"/>
-                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="top" secondItem="8QX-zg-nmX" secondAttribute="top" constant="10" id="Xd2-HU-Bc7"/>
-                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="centerY" secondItem="8QX-zg-nmX" secondAttribute="centerY" id="gqN-1U-unk"/>
+                                                <constraint firstAttribute="trailing" secondItem="MF2-6t-lI3" secondAttribute="trailing" constant="20" id="486-da-1eR"/>
+                                                <constraint firstAttribute="bottom" secondItem="MF2-6t-lI3" secondAttribute="bottom" constant="10" id="AGu-zj-VSq"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="leading" secondItem="8QX-zg-nmX" secondAttribute="leading" constant="20" id="Fdd-TK-r3h"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="top" secondItem="8QX-zg-nmX" secondAttribute="top" constant="10" id="fwE-C4-5zL"/>
+                                                <constraint firstItem="MF2-6t-lI3" firstAttribute="centerY" secondItem="8QX-zg-nmX" secondAttribute="centerY" id="oSD-Sh-zr0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -193,12 +194,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jUr-yu-TVv" firstAttribute="bottom" secondItem="EJh-ns-Kto" secondAttribute="bottom" id="5KQ-Wj-af4"/>
-                            <constraint firstItem="jUr-yu-TVv" firstAttribute="leading" secondItem="EJh-ns-Kto" secondAttribute="leading" id="6q6-Lr-aVS"/>
-                            <constraint firstItem="jUr-yu-TVv" firstAttribute="top" secondItem="EJh-ns-Kto" secondAttribute="top" id="SE3-hf-yXs"/>
-                            <constraint firstItem="jUr-yu-TVv" firstAttribute="trailing" secondItem="EJh-ns-Kto" secondAttribute="trailing" id="haE-ux-i7F"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EJh-ns-Kto"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="3ST-ao-Ssd"/>

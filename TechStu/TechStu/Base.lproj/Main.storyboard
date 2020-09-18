@@ -45,19 +45,19 @@
             </objects>
             <point key="canvasLocation" x="-846" y="396"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="A3E-t1-nAa">
             <objects>
-                <viewController id="O6L-hR-1H0" sceneMemberID="viewController">
+                <viewController id="O6L-hR-1H0" customClass="HomeViewController" customModule="TechStu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBa-tD-wxr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-eA-0dH">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-eA-0dH" userLabel="topView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="376.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwq-8f-OuL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwq-8f-OuL" userLabel="bottomView">
                                 <rect key="frame" x="0.0" y="425.33333333333337" width="414" height="376.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -78,6 +78,10 @@
                         <viewLayoutGuide key="safeArea" id="2md-1s-SZC"/>
                     </view>
                     <navigationItem key="navigationItem" id="qY9-e0-hea"/>
+                    <connections>
+                        <outlet property="bottomView" destination="hwq-8f-OuL" id="xMd-ha-gMb"/>
+                        <outlet property="topView" destination="B9g-eA-0dH" id="YxX-Df-smZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wy-L8-zVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

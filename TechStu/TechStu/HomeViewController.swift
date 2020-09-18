@@ -26,7 +26,7 @@ class HomeViewController: UIViewController, iCarouselDataSource {
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        view.backgroundColor = .red
+        view.backgroundColor = .gray
         return view
         
     }

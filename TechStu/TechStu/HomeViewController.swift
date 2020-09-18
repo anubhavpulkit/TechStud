@@ -9,9 +9,25 @@
 import iCarousel
 import UIKit
 
-class HomeViewController: UIViewController, iCarouselDataSource {
+class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let homeCell:HomeViewCell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeViewCell
+        
+        homeCell.notificationLabel.text = "igno"
+        return homeCell
+    
+    }
+    
+    
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var bottomView: UIView!
+
     
     let myCarousel: iCarousel = {
           let view = iCarousel()
@@ -35,7 +51,7 @@ class HomeViewController: UIViewController, iCarouselDataSource {
         super.viewDidLoad()
         view.addSubview(myCarousel)
         self.myCarousel.dataSource = self
-        myCarousel.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 200)
+        myCarousel.frame = CGRect(x: 0, y: 60, width: view.frame.size.width, height: 200)
         
     }
     

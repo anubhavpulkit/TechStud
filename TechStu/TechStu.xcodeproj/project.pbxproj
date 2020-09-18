@@ -20,6 +20,7 @@
 		E689363B25108F9200E14504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E689363925108F9200E14504 /* LaunchScreen.storyboard */; };
 		E689364625108F9200E14504 /* TechStuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689364525108F9200E14504 /* TechStuTests.swift */; };
 		E689365125108F9200E14504 /* TechStuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689365025108F9200E14504 /* TechStuUITests.swift */; };
+		E6C622A22515387F001263C1 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C622A12515387F001263C1 /* HomeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E689364C25108F9200E14504 /* TechStuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechStuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E689365025108F9200E14504 /* TechStuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStuUITests.swift; sourceTree = "<group>"; };
 		E689365225108F9200E14504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6C622A12515387F001263C1 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				E689363025108F9000E14504 /* SceneDelegate.swift */,
 				E6707E622514A45D00504DF9 /* HomeViewController.swift */,
 				E689363225108F9000E14504 /* settingViewController.swift */,
+				E6C622A12515387F001263C1 /* HomeViewCell.swift */,
 				E618AD692510F9D800A5C428 /* versionCell.swift */,
 				E689363425108F9000E14504 /* Main.storyboard */,
 				E689363925108F9200E14504 /* LaunchScreen.storyboard */,
@@ -342,6 +345,7 @@
 			files = (
 				E689363325108F9000E14504 /* settingViewController.swift in Sources */,
 				E66209D225127692006D0C1D /* SettingTableViewCell.swift in Sources */,
+				E6C622A22515387F001263C1 /* HomeViewCell.swift in Sources */,
 				E689362F25108F9000E14504 /* AppDelegate.swift in Sources */,
 				E618AD6A2510F9D800A5C428 /* versionCell.swift in Sources */,
 				E689363125108F9000E14504 /* SceneDelegate.swift in Sources */,

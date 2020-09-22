@@ -30,11 +30,10 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
 
     
     let myCarousel: iCarousel = {
-          let view = iCarousel()
-        view.type = .rotary
-        return view
-                  
-      }()
+        let firstView = iCarousel()
+        firstView.type = .rotary
+        return firstView
+    }()
     
     func numberOfItems(in carousel: iCarousel) -> Int {
         return 4
@@ -43,16 +42,25 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         view.backgroundColor = .gray
+    
         return view
-        
     }
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(myCarousel)
+        topView.addSubview(myCarousel)
         self.myCarousel.dataSource = self
-        myCarousel.frame = CGRect(x: 0, y: 60, width: view.frame.size.width, height: 200)
         
+//        myCarousel.frame = CGRect(x: 0, y: 30, width: view.frame.size.width, height: 200)
+        myCarousel.translatesAutoresizingMaskIntoConstraints = false
+        myCarousel.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
+        myCarousel.leftAnchor.constraint(equalTo: topView.leftAnchor).isActive = true
+        myCarousel.bottomAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
+        myCarousel.rightAnchor.constraint(equalTo: topView.rightAnchor).isActive = true
+        myCarousel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        myCarousel.heightAnchor.constraint(equalToConstant: 200).isActive = true
+                
     }
+    
     
 }

@@ -20,14 +20,23 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         
         let homeCell:HomeViewCell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeViewCell
         
-        homeCell.notificationLabel.text = "igno"
+        
+        
+        homeCell.Title.text = "Title"
+        homeCell.Description.text = "Description"
+        homeCell.Date.text = """
+            Date
+            April 6
+            """
+        homeCell.logo.image = #imageLiteral(resourceName: "gsoc")
         return homeCell
     
     }
     
     
     @IBOutlet weak var topView: UIView!
-
+    @IBOutlet weak var homeCell: HomeViewCell!
+    
     
     let myCarousel: iCarousel = {
         let firstView = iCarousel()
@@ -59,8 +68,5 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         myCarousel.rightAnchor.constraint(equalTo: topView.rightAnchor).isActive = true
         myCarousel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         myCarousel.heightAnchor.constraint(equalToConstant: 200).isActive = true
-                
     }
-    
-    
 }

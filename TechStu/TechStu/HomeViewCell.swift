@@ -10,7 +10,11 @@ import UIKit
 
 class HomeViewCell: UITableViewCell {
 
-    @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var Title: UILabel!
+    @IBOutlet weak var Description: UILabel!
+    @IBOutlet weak var Date: UILabel!
+    @IBOutlet weak var logo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

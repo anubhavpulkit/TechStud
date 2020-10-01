@@ -22,12 +22,8 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         
         
         
-        homeCell.Title.text = "Title"
-        homeCell.Description.text = "Description"
-        homeCell.Date.text = """
-            Date
-            April 6
-            """
+        homeCell.Title.text = "Google Summer of Code"
+        homeCell.Description.text = "a global program focused on introducing students to open source software development."
         homeCell.logo.image = #imageLiteral(resourceName: "gsoc")
         return homeCell
     
@@ -35,8 +31,6 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     
     
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var homeCell: HomeViewCell!
-    
     
     let myCarousel: iCarousel = {
         let firstView = iCarousel()
@@ -60,7 +54,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         view.addSubview(description)
         description.translatesAutoresizingMaskIntoConstraints = false
         description.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        let des = [ "anubhav", "singh", "iOS"]
+        let des = [ "Anubhav", "Garima", "iOS"]
         description.text = des[index]
         description.textColor = UIColor.white
         description.textAlignment = .center

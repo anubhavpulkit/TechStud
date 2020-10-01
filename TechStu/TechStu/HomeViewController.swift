@@ -45,13 +45,33 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     }()
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 4
+        return 3
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         view.backgroundColor = .gray
-    
+        let imageview = UIImageView(frame: view.bounds)
+        view.addSubview(imageview)
+        imageview.contentMode = .scaleAspectFill
+        imageview.image = UIImage(named: "dog\(index+1)")
+        
+        let description = UILabel(frame: view.bounds)
+        view.addSubview(description)
+        description.translatesAutoresizingMaskIntoConstraints = false
+        description.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        let des = [ "anubhav", "singh", "iOS"]
+        description.text = des[index]
+        description.textColor = UIColor.white
+        description.textAlignment = .center
+        
+        // Constraints for description label
+        view.centerXAnchor.constraint(equalTo: description.centerXAnchor).isActive = true
+        description.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        description.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -10).isActive = true
+        description.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        
+        
         return view
     }
   

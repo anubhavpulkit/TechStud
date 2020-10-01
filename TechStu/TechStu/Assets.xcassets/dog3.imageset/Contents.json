@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "118729375-stack-of-paper-notes-with-words-help-me-on-white-wooden-background-top-view-space-for-text.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

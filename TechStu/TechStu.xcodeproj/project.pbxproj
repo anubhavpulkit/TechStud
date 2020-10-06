@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		86C0B51A25190B930026FD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C0B51925190B930026FD74 /* Assets.xcassets */; };
 		A0F5D4527B53288926B0A45F /* Pods_TechStu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877B91374C289124817C983F /* Pods_TechStu.framework */; };
+		E60C63A5252B054200962D2B /* TechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C63A4252B054200962D2B /* TechViewController.swift */; };
+		E60C63AD252B05B300962D2B /* TechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C63AC252B05B300962D2B /* TechTableViewCell.swift */; };
 		E618AD6A2510F9D800A5C428 /* versionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E618AD692510F9D800A5C428 /* versionCell.swift */; };
 		E66209D225127692006D0C1D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66209D025127692006D0C1D /* SettingTableViewCell.swift */; };
 		E66209D325127692006D0C1D /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E66209D125127692006D0C1D /* SettingTableViewCell.xib */; };
@@ -45,6 +47,8 @@
 		86C0B51925190B930026FD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		877B91374C289124817C983F /* Pods_TechStu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechStu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EE906FA8DE8A13104A56D9 /* Pods-TechStu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechStu.release.xcconfig"; path = "Target Support Files/Pods-TechStu/Pods-TechStu.release.xcconfig"; sourceTree = "<group>"; };
+		E60C63A4252B054200962D2B /* TechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechViewController.swift; sourceTree = "<group>"; };
+		E60C63AC252B05B300962D2B /* TechTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechTableViewCell.swift; sourceTree = "<group>"; };
 		E618AD692510F9D800A5C428 /* versionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = versionCell.swift; sourceTree = "<group>"; };
 		E66209D025127692006D0C1D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		E66209D125127692006D0C1D /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -136,15 +140,17 @@
 				E689362E25108F9000E14504 /* AppDelegate.swift */,
 				E689363025108F9000E14504 /* SceneDelegate.swift */,
 				E6707E622514A45D00504DF9 /* HomeViewController.swift */,
-				E689363225108F9000E14504 /* settingViewController.swift */,
 				E6C622A12515387F001263C1 /* HomeViewCell.swift */,
+				E60C63A4252B054200962D2B /* TechViewController.swift */,
+				E60C63AC252B05B300962D2B /* TechTableViewCell.swift */,
+				E689363225108F9000E14504 /* settingViewController.swift */,
+				E66209D025127692006D0C1D /* SettingTableViewCell.swift */,
+				E66209D125127692006D0C1D /* SettingTableViewCell.xib */,
 				E618AD692510F9D800A5C428 /* versionCell.swift */,
 				E689363425108F9000E14504 /* Main.storyboard */,
 				86C0B51925190B930026FD74 /* Assets.xcassets */,
 				E689363925108F9200E14504 /* LaunchScreen.storyboard */,
 				E689363C25108F9200E14504 /* Info.plist */,
-				E66209D025127692006D0C1D /* SettingTableViewCell.swift */,
-				E66209D125127692006D0C1D /* SettingTableViewCell.xib */,
 			);
 			path = TechStu;
 			sourceTree = "<group>";
@@ -346,9 +352,11 @@
 				E689363325108F9000E14504 /* settingViewController.swift in Sources */,
 				E66209D225127692006D0C1D /* SettingTableViewCell.swift in Sources */,
 				E6C622A22515387F001263C1 /* HomeViewCell.swift in Sources */,
+				E60C63AD252B05B300962D2B /* TechTableViewCell.swift in Sources */,
 				E689362F25108F9000E14504 /* AppDelegate.swift in Sources */,
 				E618AD6A2510F9D800A5C428 /* versionCell.swift in Sources */,
 				E689363125108F9000E14504 /* SceneDelegate.swift in Sources */,
+				E60C63A5252B054200962D2B /* TechViewController.swift in Sources */,
 				E6707E632514A45D00504DF9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

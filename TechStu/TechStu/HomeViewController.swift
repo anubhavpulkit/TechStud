@@ -54,7 +54,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         view.addSubview(description)
         description.translatesAutoresizingMaskIntoConstraints = false
         description.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        let des = [ "Anubhav", "Garima", "iOS"]
+        let des = [ "Anubhav", "Singh", "iOS"]
         description.text = des[index]
         description.textColor = UIColor.white
         description.textAlignment = .center

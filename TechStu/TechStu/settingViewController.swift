@@ -9,6 +9,7 @@
 import UIKit
 
 class settingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var SettingTable: UITableView!
     
     let label = ["About Us!", "Rate Us!", "Share with friends!"]

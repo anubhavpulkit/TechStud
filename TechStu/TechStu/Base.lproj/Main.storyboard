@@ -228,18 +228,97 @@
         <!--Tech Companies-->
         <scene sceneID="DnB-o7-RUd">
             <objects>
-                <viewController id="Gpz-Ui-zpi" sceneMemberID="viewController">
+                <viewController id="Gpz-Ui-zpi" customClass="TechViewController" customModule="TechStu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7iD-Rc-6Wo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTH-Ti-b6c">
+                                <rect key="frame" x="0.0" y="88.000000000000014" width="414" height="178.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erH-WM-g0i">
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="178.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="800" id="gAd-mM-3vo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="erH-WM-g0i" firstAttribute="top" secondItem="uTH-Ti-b6c" secondAttribute="top" id="4oP-fw-F81"/>
+                                    <constraint firstItem="erH-WM-g0i" firstAttribute="centerY" secondItem="uTH-Ti-b6c" secondAttribute="centerY" id="Zmv-Lp-siC"/>
+                                    <constraint firstAttribute="trailing" secondItem="erH-WM-g0i" secondAttribute="trailing" constant="20" symbolic="YES" id="kI1-Hu-u4z"/>
+                                    <constraint firstItem="erH-WM-g0i" firstAttribute="leading" secondItem="uTH-Ti-b6c" secondAttribute="leading" id="ken-NC-ps7"/>
+                                    <constraint firstAttribute="bottom" secondItem="erH-WM-g0i" secondAttribute="bottom" id="tnF-8f-6WA"/>
+                                </constraints>
+                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="78" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-VS-nvD">
+                                <rect key="frame" x="0.0" y="271.33333333333331" width="414" height="541.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TechCell" textLabel="bo8-wE-Tfe" detailTextLabel="bUv-1g-lRo" imageView="YT9-q8-uxg" style="IBUITableViewCellStyleSubtitle" id="A5u-Zi-1Yl" customClass="TechTableViewCell" customModule="TechStu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A5u-Zi-1Yl" id="aIj-gH-AIS" customClass="TechTableViewCell" customModule="TechStu" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bo8-wE-Tfe">
+                                                    <rect key="frame" x="124.33333333333331" y="19" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bUv-1g-lRo">
+                                                    <rect key="frame" x="124.33333333333333" y="42.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="gsoc" id="YT9-q8-uxg">
+                                                    <rect key="frame" x="20" y="0.0" width="89.333333333333314" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="SubtitleLabel" destination="bUv-1g-lRo" id="Zia-PZ-cms"/>
+                                            <outlet property="logoPic" destination="YT9-q8-uxg" id="bOr-un-wc9"/>
+                                            <outlet property="titleLabel" destination="bo8-wE-Tfe" id="pKC-kL-v60"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gpz-Ui-zpi" id="yLa-EG-H7a"/>
+                                    <outlet property="delegate" destination="Gpz-Ui-zpi" id="RlT-TF-wqA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="W1j-E1-Axn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uTH-Ti-b6c" firstAttribute="trailing" secondItem="W1j-E1-Axn" secondAttribute="trailing" id="8L8-iu-Rdj"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="leading" secondItem="W1j-E1-Axn" secondAttribute="leading" id="Dfd-DT-uTX"/>
+                            <constraint firstItem="uTH-Ti-b6c" firstAttribute="top" secondItem="W1j-E1-Axn" secondAttribute="top" id="F1J-kX-4gj"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="bottom" secondItem="W1j-E1-Axn" secondAttribute="bottom" id="Hfs-hy-kir"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="height" secondItem="7iD-Rc-6Wo" secondAttribute="height" multiplier="0.604539" id="b3p-W4-MFj"/>
+                            <constraint firstItem="uTH-Ti-b6c" firstAttribute="leading" secondItem="W1j-E1-Axn" secondAttribute="leading" id="ihh-io-F2g"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="trailing" secondItem="W1j-E1-Axn" secondAttribute="trailing" id="kd4-s7-alN"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="top" secondItem="uTH-Ti-b6c" secondAttribute="bottom" constant="5" id="qpm-xK-qLY"/>
+                            <constraint firstItem="CbV-VS-nvD" firstAttribute="bottom" secondItem="W1j-E1-Axn" secondAttribute="bottom" id="yLI-Kv-ewf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tech Companies" id="avd-8Y-qp0"/>
+                    <connections>
+                        <outlet property="TechtabelView" destination="CbV-VS-nvD" id="op5-WS-mi6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x31-2D-7Jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="1132"/>
+            <point key="canvasLocation" x="-120.28985507246378" y="1130.3571428571429"/>
         </scene>
         <!--Open-Source-->
         <scene sceneID="wAw-Ah-ZCi">
@@ -346,6 +425,7 @@
     </scenes>
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>
+        <image name="gsoc" width="688" height="605"/>
         <image name="icons8-gear-30 blue" width="30" height="30"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
@@ -355,6 +435,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

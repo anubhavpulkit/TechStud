@@ -23,11 +23,11 @@ class settingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if indexPath.row > 2 {
             let coustumCell:SettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as! SettingTableViewCell
             coustumCell.configure(with: "Version: 1.0.0")
-            
+            coustumCell.selectionStyle = .none
             return coustumCell
         }
         
-        let cell:versionCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! versionCell
+        let cell:settingCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! settingCell
         
             cell.cellButtons.setTitle(label[indexPath.row], for: .normal)
         return cell

@@ -17,14 +17,26 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+                
         let homeCell:HomeViewCell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeViewCell
-        
-        
         
         homeCell.Title.text = "Google Summer of Code"
         homeCell.Description.text = "a global program focused on introducing students to open source software development."
         homeCell.logo.image = #imageLiteral(resourceName: "gsoc")
+        
+        // For animated table view cell
+        if let lastIndexPath = tableView.indexPathsForVisibleRows?.last{
+            if lastIndexPath.row <= indexPath.row{
+                homeCell.center.y = homeCell.center.y + homeCell.frame.height / 2
+                homeCell.alpha = 0
+                UIView.animate(withDuration: 0.6, delay: 0.05*Double(indexPath.row), options: [.curveEaseInOut], animations: {
+                    homeCell.center.y = homeCell.center.y - homeCell.frame.height / 2
+                    homeCell.alpha = 1
+                }, completion: nil)
+            }
+        }
+        
+        
         return homeCell
     
     }

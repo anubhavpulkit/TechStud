@@ -9,10 +9,10 @@
 import UIKit
 
 class TechTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var logoPic: UIImageView!
-    @IBOutlet weak var SubtitleLabel: UILabel!
+    @IBOutlet weak var companyTitle: UILabel!
+    @IBOutlet weak var hrfText: UITextField!
+    
+    @IBOutlet weak var logoImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -8,32 +8,78 @@
 
 import UIKit
 
-class TechViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var TechtabelView: UITableView!
-    @IBOutlet weak var TechCell: TechTableViewCell!
+struct ProductData {
+    let title:String?
+    let link:String?
+    let img:UIImage?
+}
+
+struct ServiceData {
+    let title:String?
+    let link:String?
+    let img:UIImage?
+}
+
+
+class TechViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+      
+    @IBOutlet weak var tableView: UITableView!
+    var pdData:[ProductData] = []
+    var serData:[ServiceData] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        var count = 0
+        
+        if segmentController.selectedSegmentIndex == 0 {
+            count = pdData.count
+        }
+    else if segmentController.selectedSegmentIndex == 1{
+        count = serData.count
+        }
+        
+     return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TechTableViewCell
         
-        let techCell:TechTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TechCell", for: indexPath) as! TechTableViewCell
-        techCell.SubtitleLabel.text = "beta version"
-        techCell.titleLabel.text = "beta Title"
-        
-        techCell.logoPic.image = #imageLiteral(resourceName: "dog2")
-        
-        return techCell
+        if segmentController.selectedSegmentIndex == 0{
+            cell.companyTitle.text = pdData[indexPath.row].title
+            cell.hrfText.text = pdData[indexPath.row].link
+            cell.logoImage.image = pdData[indexPath.row].img
+        }
+        else if segmentController.selectedSegmentIndex == 1{
+            cell.companyTitle.text = serData[indexPath.row].title
+            cell.hrfText.text = serData[indexPath.row].link
+            cell.logoImage.image = serData[indexPath.row].img
+        }
+        return cell
     }
     
 
+    @IBOutlet weak var segmentController: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        pdData = [
+        ProductData(title: "Amazon", link:"https://www.amazon.jobs/en/" , img: #imageLiteral(resourceName: "dog1")),
+            ProductData(title: "anu", link: "this", img: #imageLiteral(resourceName: "icons8-home-52")),
+            ProductData(title: "singh", link: "do", img: #imageLiteral(resourceName: "dog2"))
+        ]
+        serData = [
+            ServiceData(title: "ser", link: "sur", img: #imageLiteral(resourceName: "dog1")),
+            ServiceData(title: "given", link: "what", img: #imageLiteral(resourceName: "gsoc")),
+            ServiceData(title: "yes ", link: "do", img: #imageLiteral(resourceName: "icons8-gear-30 blue"))
+        ]
+        
     }
     
-
+    @IBAction func Segment(_ sender: UISegmentedControl) {
+        self.tableView.reloadData()
+    }
+    
+    
 
 }

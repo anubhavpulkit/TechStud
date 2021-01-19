@@ -16,13 +16,18 @@ class HomeViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        logo.clipsToBounds = true
+        logo.layer.cornerRadius = 10
+        Description.textColor = UIColor.gray
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+        contentView.layer.cornerRadius = 8
+        contentView.backgroundColor = .systemGray6
 
-        // Configure the view for the selected state
     }
-
 }
+

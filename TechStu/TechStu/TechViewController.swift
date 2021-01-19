@@ -44,6 +44,8 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TechTableViewCell
         
+        cell.selectionStyle = .none
+        
         if segmentController.selectedSegmentIndex == 0{
             cell.companyTitle.text = pdData[indexPath.row].title
             cell.hrfText.text = pdData[indexPath.row].link
@@ -55,6 +57,19 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.logoImage.image = serData[indexPath.row].img
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell!.contentView.backgroundColor = UIColor.orange
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
+               cell!.contentView.backgroundColor = .clear
+            }
     }
     
 

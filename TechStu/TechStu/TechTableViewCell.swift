@@ -11,12 +11,13 @@ import UIKit
 class TechTableViewCell: UITableViewCell {
     @IBOutlet weak var companyTitle: UILabel!
     @IBOutlet weak var hrfText: UITextField!
-    
     @IBOutlet weak var logoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        hrfText.borderStyle = .none
+    
+            }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

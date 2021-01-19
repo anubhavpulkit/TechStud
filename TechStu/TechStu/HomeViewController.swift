@@ -17,13 +17,15 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
+        
         let homeCell:HomeViewCell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeViewCell
         
         homeCell.Title.text = "Google Summer of Code"
         homeCell.Description.text = "a global program focused on introducing students to open source software development."
         homeCell.logo.image = #imageLiteral(resourceName: "gsoc")
         
+        homeCell.selectionStyle = .none
+                
         // For animated table view cell
         if let lastIndexPath = tableView.indexPathsForVisibleRows?.last{
             if lastIndexPath.row <= indexPath.row{
@@ -35,12 +37,30 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
                 }, completion: nil)
             }
         }
-        
-        
         return homeCell
-    
     }
     
+
+    // for selected row
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("Row \(indexPath.row) selected")
+//        let cell:HomeViewCell = tableView.cellForRow(at: indexPath) as! HomeViewCell
+//        cell.backgroundColor = UIColor.orange
+//    }
+ 
+// color change of selected cell(highlight a new color when user select a cell)
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell!.contentView.backgroundColor = UIColor.systemGray6
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
+               cell!.contentView.backgroundColor = .systemYellow
+            }
+    }
     
     @IBOutlet weak var topView: UIView!
     
@@ -77,16 +97,17 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         description.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -10).isActive = true
         description.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         
-        
         return view
     }
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topView.addSubview(myCarousel)
         self.myCarousel.dataSource = self
         
-//        myCarousel.frame = CGRect(x: 0, y: 30, width: view.frame.size.width, height: 200)
+        
+        
+        //        myCarousel.frame = CGRect(x: 0, y: 30, width: view.frame.size.width, height: 200)
         myCarousel.translatesAutoresizingMaskIntoConstraints = false
         myCarousel.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
         myCarousel.leftAnchor.constraint(equalTo: topView.leftAnchor).isActive = true

@@ -23,9 +23,8 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         homeCell.Title.text = "Google Summer of Code"
         homeCell.Description.text = "a global program focused on introducing students to open source software development."
         homeCell.logo.image = #imageLiteral(resourceName: "gsoc")
-        
         homeCell.selectionStyle = .none
-                
+        
         // For animated table view cell
         if let lastIndexPath = tableView.indexPathsForVisibleRows?.last{
             if lastIndexPath.row <= indexPath.row{
@@ -40,15 +39,15 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         return homeCell
     }
     
-
+    
     // for selected row
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("Row \(indexPath.row) selected")
-//        let cell:HomeViewCell = tableView.cellForRow(at: indexPath) as! HomeViewCell
-//        cell.backgroundColor = UIColor.orange
-//    }
- 
-// color change of selected cell(highlight a new color when user select a cell)
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        print("Row \(indexPath.row) selected")
+    //        let cell:HomeViewCell = tableView.cellForRow(at: indexPath) as! HomeViewCell
+    //        cell.backgroundColor = UIColor.orange
+    //    }
+    
+    // color change of selected cell(highlight a new color when user select a cell)
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell!.contentView.backgroundColor = UIColor.systemGray6
@@ -58,8 +57,8 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         let cell = tableView.cellForRow(at: indexPath)
         
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (_) in
-               cell!.contentView.backgroundColor = .systemYellow
-            }
+            cell!.contentView.backgroundColor = .systemYellow
+        }
     }
     
     @IBOutlet weak var topView: UIView!
@@ -88,7 +87,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         description.heightAnchor.constraint(equalToConstant: 50).isActive = true
         let des = [ "Anubhav", "Singh", "iOS"]
         description.text = des[index]
-        description.textColor = UIColor.white
+        description.textColor = UIColor.black
         description.textAlignment = .center
         
         // Constraints for description label
@@ -104,7 +103,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
         super.viewDidLoad()
         topView.addSubview(myCarousel)
         self.myCarousel.dataSource = self
-        
+        topView.backgroundColor = .systemGray6
         
         
         //        myCarousel.frame = CGRect(x: 0, y: 30, width: view.frame.size.width, height: 200)

@@ -75,20 +75,20 @@ class HomeViewController: UIViewController, iCarouselDataSource, UITableViewDele
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        view.backgroundColor = .gray
+        view.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/225, alpha: 0.7)
         let imageview = UIImageView(frame: view.bounds)
         view.addSubview(imageview)
-        imageview.contentMode = .scaleAspectFill
+        imageview.contentMode = .scaleAspectFit
         imageview.image = UIImage(named: "dog\(index+1)")
         
         let description = UILabel(frame: view.bounds)
         view.addSubview(description)
         description.translatesAutoresizingMaskIntoConstraints = false
         description.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        let des = [ "Anubhav", "Singh", "iOS"]
-        description.text = des[index]
-        description.textColor = UIColor.black
-        description.textAlignment = .center
+//        let des = [ "Open Source", "Tech Companies", "Study Material"]
+//        description.text = des[index]
+//        description.textColor = UIColor.black
+//        description.textAlignment = .center
         
         // Constraints for description label
         view.centerXAnchor.constraint(equalTo: description.centerXAnchor).isActive = true

@@ -89,6 +89,8 @@ class TechViewController: UIViewController, UITableViewDelegate, UITableViewData
             ServiceData(title: "yes ", link: "do", img: #imageLiteral(resourceName: "icons8-gear-30 blue"))
         ]
         
+       // segmentController.st
+        
     }
     
     @IBAction func Segment(_ sender: UISegmentedControl) {

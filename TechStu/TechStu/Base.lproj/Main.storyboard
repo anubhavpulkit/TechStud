@@ -107,7 +107,7 @@
                                                                 <constraint firstAttribute="width" constant="200" id="Bwb-8q-OKg"/>
                                                                 <constraint firstAttribute="height" constant="20" id="s3a-9P-og9"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -225,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="1312" y="396"/>
         </scene>
-        <!--Tech Companies-->
+        <!--Study Material-->
         <scene sceneID="DnB-o7-RUd">
             <objects>
                 <viewController id="Gpz-Ui-zpi" customClass="TechViewController" customModule="TechStu" customModuleProvider="target" sceneMemberID="viewController">
@@ -234,21 +234,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-YK-LlC">
-                                <rect key="frame" x="0.0" y="88" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="9NP-ed-Osb"/>
+                                    <constraint firstAttribute="height" constant="40" id="9NP-ed-Osb"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Product Based"/>
-                                    <segment title="Service Based"/>
+                                    <segment title="iOS"/>
+                                    <segment title="Web Development"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" red="0.94589456890000001" green="0.26806780470000002" blue="0.46310769559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedSegmentTintColor" red="0.93995356559999999" green="0.50701248845918201" blue="0.33265229325176454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="Segment:" destination="Gpz-Ui-zpi" eventType="valueChanged" id="Jd7-dS-ZEp"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-jL-lZ2">
-                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="683"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="sSn-gi-c5w" customClass="TechTableViewCell" customModule="TechStu" customModuleProvider="target">
@@ -258,19 +258,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFg-Dp-H90">
-                                                    <rect key="frame" x="5" y="5" width="271" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFg-Dp-H90">
+                                                    <rect key="frame" x="10" y="10" width="258" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="km9-3J-Z0U"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDg-oU-hoq">
-                                                    <rect key="frame" x="5" y="61" width="271" height="34"/>
+                                                    <rect key="frame" x="10" y="56" width="258" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ab4-R2-GFa">
-                                                    <rect key="frame" x="284" y="2" width="128" height="96"/>
+                                                    <rect key="frame" x="276" y="2" width="128" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="128" id="5YJ-rr-3gn"/>
                                                         <constraint firstAttribute="height" constant="96" id="BRa-gp-shw"/>
@@ -278,14 +281,14 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ab4-R2-GFa" secondAttribute="trailing" constant="10" id="EWc-RT-Kwf"/>
+                                                <constraint firstItem="ZFg-Dp-H90" firstAttribute="leading" secondItem="8Js-n8-i0t" secondAttribute="leading" constant="10" id="J9K-oZ-A6M"/>
+                                                <constraint firstItem="ZFg-Dp-H90" firstAttribute="top" secondItem="8Js-n8-i0t" secondAttribute="top" constant="10" id="S0f-LB-DAv"/>
                                                 <constraint firstItem="Ab4-R2-GFa" firstAttribute="leading" secondItem="ZFg-Dp-H90" secondAttribute="trailing" constant="8" id="WS7-7c-QBW"/>
-                                                <constraint firstItem="MDg-oU-hoq" firstAttribute="leading" secondItem="8Js-n8-i0t" secondAttribute="leading" constant="5" id="aKJ-47-oh0"/>
                                                 <constraint firstItem="Ab4-R2-GFa" firstAttribute="leading" secondItem="MDg-oU-hoq" secondAttribute="trailing" constant="8" id="bfA-6h-hmE"/>
-                                                <constraint firstItem="ZFg-Dp-H90" firstAttribute="leading" secondItem="8Js-n8-i0t" secondAttribute="leading" constant="5" id="bps-t4-vTB"/>
                                                 <constraint firstItem="Ab4-R2-GFa" firstAttribute="top" secondItem="8Js-n8-i0t" secondAttribute="top" constant="2" id="d6t-fQ-jpz"/>
-                                                <constraint firstItem="ZFg-Dp-H90" firstAttribute="top" secondItem="8Js-n8-i0t" secondAttribute="top" constant="5" id="mbD-Qa-lmm"/>
-                                                <constraint firstAttribute="bottom" secondItem="MDg-oU-hoq" secondAttribute="bottom" constant="5" id="nIn-fR-cTL"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ab4-R2-GFa" secondAttribute="trailing" constant="2" id="nM9-Bc-1Bk"/>
+                                                <constraint firstAttribute="bottom" secondItem="MDg-oU-hoq" secondAttribute="bottom" constant="10" id="fp4-6v-iPk"/>
+                                                <constraint firstItem="MDg-oU-hoq" firstAttribute="leading" secondItem="8Js-n8-i0t" secondAttribute="leading" constant="10" id="siQ-aY-9pn"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ab4-R2-GFa" secondAttribute="bottom" constant="2" id="t1I-DD-m5c"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -314,7 +317,7 @@
                             <constraint firstItem="EPc-jL-lZ2" firstAttribute="leading" secondItem="W1j-E1-Axn" secondAttribute="leading" id="uCV-pO-elA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tech Companies" id="avd-8Y-qp0"/>
+                    <navigationItem key="navigationItem" title="Study Material" id="avd-8Y-qp0"/>
                     <connections>
                         <outlet property="segmentController" destination="VAF-YK-LlC" id="t6a-vq-Aeh"/>
                         <outlet property="tableView" destination="EPc-jL-lZ2" id="Q4N-vF-EjZ"/>
